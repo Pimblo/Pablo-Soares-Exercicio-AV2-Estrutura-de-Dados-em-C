@@ -4,19 +4,23 @@
   
 int main() {
   int op, n;
+
   printf("Insira o tamanho do vetor:\n");
   scanf("%d", &n);
+
   int vet[n];
   printf("Preencha o vetor:\n");
   for(int i = 0; i < n; i++){
     scanf("%d", &vet[i]);
   }
+
 do{
   printf("\nEscolha o método de ordenação: ");
   printf("\n1 - Bubble Sort");
   printf("\n2 - Isertion Sort");
   printf("\n0 - Sair\n");
   scanf("%d", &op);
+
   switch(op){
     
     case 1: 
