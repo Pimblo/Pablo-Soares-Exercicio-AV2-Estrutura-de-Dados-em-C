@@ -14,8 +14,10 @@ int EMPTY(NodeF *FILA){
 void ENQUEUE(NodeF *FILA, int tam){
   NodeF *novo=(NodeF*)malloc(sizeof(NodeF));
   novo->prox = NULL;
+
   printf("Novo item da Fila: \n");
   scanf("%d", &novo->conteudo);
+
   if(EMPTY(FILA)){
     FILA->prox=novo;
   }else{
