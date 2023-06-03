@@ -14,8 +14,10 @@ int vazia(NodeP *PILHA){
 void PUSH(NodeP *PILHA, int tam){
   NodeP *novo=(NodeP *) malloc(sizeof(NodeP));
   novo->prox = NULL;
+
   printf("Novo item: \n");
   scanf("%d", &novo->item);
+
   if(vazia(PILHA)){
     PILHA->prox = novo;
   }else{
@@ -52,6 +54,7 @@ void POP(NodeP *PILHA, int tam){
   }else{
     NodeP *ultimo = PILHA->prox;
     NodeP *penultimo = PILHA;
+
     while(ultimo->prox != NULL){
       penultimo = ultimo;
       ultimo = ultimo->prox;
