@@ -2,6 +2,7 @@ typedef struct NodeP{
   int item, tam;
   struct NodeP *prox;
 }NodeP;
+
 int vazia(NodeP *PILHA){
   if(PILHA->prox == NULL){
     return 1;
@@ -9,6 +10,7 @@ int vazia(NodeP *PILHA){
     return 0;
   }
 }
+
 void PUSH(NodeP *PILHA, int tam){
   NodeP *novo=(NodeP *) malloc(sizeof(NodeP));
   novo->prox = NULL;
@@ -25,6 +27,7 @@ void PUSH(NodeP *PILHA, int tam){
   }
   tam++; 
 }
+
 void PrintP(NodeP *PILHA, int tam){
   if(vazia(PILHA)){
     printf("Pilha vazia!\n");
@@ -41,6 +44,7 @@ void PrintP(NodeP *PILHA, int tam){
   printf("\nQuantidade de itens: %d\n", tam);
   printf("\n ");
 }
+
 void POP(NodeP *PILHA, int tam){
   if(PILHA->prox == NULL){
     printf("\nPilha vazia!!!\n");
@@ -57,6 +61,7 @@ void POP(NodeP *PILHA, int tam){
     tam--; 
   }
 }
+
 void PrintTOP(NodeP *PILHA){
   if(vazia(PILHA)){
     printf("\nPilha vazia!!!\n");
@@ -70,6 +75,7 @@ void PrintTOP(NodeP *PILHA){
     printf("%3d ", tmp->item);
   }
 }
+
 void CLEANP(NodeP *PILHA){
   if(vazia(PILHA)){
     printf("\n!!!Pilha vazia!!!\n");
